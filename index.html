@@ -187,50 +187,55 @@
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                 <!-- 左侧：整体数据 -->
-                <div class="lg:col-span-6 space-y-6">
-                    <div class="flex items-center gap-2 mb-4">
+                <div class="lg:col-span-5 flex flex-col">
+                    <div class="flex items-center gap-2 mb-4 shrink-0">
                         <div class="w-1.5 h-6 bg-pine-500 rounded-full"></div>
                         <h3 class="text-xl font-bold text-pine-900">整体数据</h3>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="flex flex-col gap-5 flex-grow">
                         <!-- Data Card 1 -->
-                        <div class="bento-card p-6 flex flex-col justify-between h-full">
-                            <div class="text-gray-500 text-sm font-medium mb-4 flex items-center gap-2">
-                                <i data-lucide="map-pin" class="w-4 h-4"></i> 已上线景区
+                        <div class="bento-card p-6 flex items-center justify-between flex-grow">
+                            <div class="text-gray-500 font-medium flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-full bg-pine-50 flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-pine-600"></i>
+                                </div>
+                                <span class="text-lg">已上线景区</span>
                             </div>
-                            <div>
-                                <div class="text-5xl font-black text-pine-900 tracking-tight">18<span class="text-xl text-gray-400 ml-1">家</span></div>
-                            </div>
+                            <div class="text-4xl font-black text-pine-900 tracking-tight">18<span class="text-base text-gray-400 ml-1 font-normal">家</span></div>
                         </div>
                         <!-- Data Card 2 -->
-                        <div class="bento-card p-6 flex flex-col justify-between h-full">
-                            <div class="text-gray-500 text-sm font-medium mb-4 flex items-center gap-2">
-                                <i data-lucide="users" class="w-4 h-4"></i> 用户
+                        <div class="bento-card p-6 flex items-center justify-between flex-grow">
+                            <div class="text-gray-500 font-medium flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center">
+                                    <i data-lucide="users" class="w-6 h-6 text-blue-600"></i>
+                                </div>
+                                <span class="text-lg">用户</span>
                             </div>
-                            <div>
-                                <div class="text-5xl font-black text-pine-900 tracking-tight">2000<span class="text-xl text-gray-400 ml-1">+</span></div>
-                            </div>
+                            <div class="text-4xl font-black text-pine-900 tracking-tight">2000<span class="text-base text-gray-400 ml-1 font-normal">+</span></div>
                         </div>
                         <!-- Data Card 3 -->
-                        <div class="bento-card p-6 flex flex-col justify-between h-full sm:col-span-2 bg-pine-900 text-white border-none relative overflow-hidden">
+                        <div class="bento-card p-6 flex items-center justify-between flex-grow bg-pine-900 text-white border-none relative overflow-hidden">
                             <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -z-0"></div>
-                            <div class="text-pine-200 text-sm font-medium mb-4 flex items-center gap-2 relative z-10">
-                                <i data-lucide="message-square" class="w-4 h-4"></i> 问答轮次
+                            <div class="text-pine-200 font-medium flex items-center gap-3 relative z-10">
+                                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                                    <i data-lucide="message-square" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <span class="text-lg">问答轮次</span>
                             </div>
                             <div class="relative z-10">
-                                <div class="text-5xl font-black text-white tracking-tight">50000<span class="text-xl text-pine-300 ml-1">+</span></div>
+                                <div class="text-4xl font-black text-white tracking-tight">50000<span class="text-base text-pine-300 ml-1 font-normal">+</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 右侧：青岩的数据使用 -->
-                <div class="lg:col-span-6 space-y-6">
-                    <div class="flex items-center gap-2 mb-4">
+                <div class="lg:col-span-7 flex flex-col">
+                    <div class="flex items-center gap-2 mb-4 shrink-0">
                         <div class="w-1.5 h-6 bg-sand-400 rounded-full"></div>
                         <h3 class="text-xl font-bold text-pine-900">青岩的数据使用</h3>
                     </div>
-                    <div class="bento-card p-6 bg-sand-50/50 border-sand-200 h-full flex flex-col">
+                    <div class="bento-card p-6 bg-sand-50/50 border-sand-200 flex-grow flex flex-col">
                         <div class="flex items-center justify-between mb-6">
                             <div class="flex items-center gap-3">
                                 <div class="w-12 h-12 rounded-full bg-white border border-sand-200 flex items-center justify-center shadow-sm">
@@ -448,8 +453,34 @@
                                     <div class="flex items-center gap-2 mb-3 text-pine-800 font-bold">
                                         <i data-lucide="smartphone" class="w-4 h-4 text-pine-500"></i> 产品输出内容
                                     </div>
-                                    <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm text-sm text-gray-600 leading-relaxed">
-                                        黄小西景区智能体嵌入高德景区 POI 页面、地图导航、泛搜等页面，包含 <strong>AI 问答</strong>、<strong>卡片推送服务</strong>（如停车场剩余车位等实时信息）以及右侧附件图所示的景区商品与服务承载页，用于展示票务、AI伴游、AI生图、AI视频、联名文创礼盒、充电宝、实体旅拍、餐饮套餐等产品输出。
+                                    <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm space-y-4 trae-browser-inspect-draggable">
+                                        <!-- 接入场景 -->
+                                        <div>
+                                            <div class="text-pine-800 font-bold text-sm mb-1 flex items-center gap-1.5">
+                                                <i data-lucide="map" class="w-4 h-4 text-pine-500"></i> 多场景无缝接入
+                                            </div>
+                                            <p class="text-gray-600 text-xs leading-relaxed">
+                                                深度嵌入高德景区 POI、地图导航及泛搜页面，实现全链路触达。
+                                            </p>
+                                        </div>
+                                        <!-- 核心功能 -->
+                                        <div>
+                                            <div class="text-pine-800 font-bold text-sm mb-1 flex items-center gap-1.5">
+                                                <i data-lucide="bot" class="w-4 h-4 text-pine-500"></i> 智能互动服务
+                                            </div>
+                                            <p class="text-gray-600 text-xs leading-relaxed">
+                                                提供 <strong>AI 问答</strong>与<strong>实时卡片推送</strong>（如停车场余位预警），提升游玩体验。
+                                            </p>
+                                        </div>
+                                        <!-- 商业变现 -->
+                                        <div>
+                                            <div class="text-pine-800 font-bold text-sm mb-1 flex items-center gap-1.5">
+                                                <i data-lucide="shopping-bag" class="w-4 h-4 text-pine-500"></i> 丰富产品矩阵
+                                            </div>
+                                            <p class="text-gray-600 text-xs leading-relaxed">
+                                                承载并转化多元商品：票务、AI伴游/生图/视频、联名文创、充电宝、实体旅拍及餐饮套餐。
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -464,31 +495,116 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- 商品服务内容表格 - 全宽展示 -->
+                    <div class="w-full bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
+                        <div class="flex items-center gap-2 mb-4 text-pine-800 font-bold">
+                            <i data-lucide="table-2" class="w-5 h-5 text-pine-500"></i> 商品服务内容明细
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm text-left text-gray-500 border border-gray-200 rounded-lg overflow-hidden">
+                                <thead class="text-xs text-gray-700 bg-gray-50 border-b border-gray-200">
+                                    <tr>
+                                        <th scope="col" class="px-4 py-3 font-bold">阶段</th>
+                                        <th scope="col" class="px-4 py-3 font-bold">商品概述</th>
+                                        <th scope="col" class="px-4 py-3 font-bold">服务内容</th>
+                                        <th scope="col" class="px-4 py-3 font-bold text-center">商品参考价格<br>(元)</th>
+                                        <th scope="col" class="px-4 py-3 font-bold">计划上线时间</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                        <td rowspan="2" class="px-4 py-3 font-medium text-gray-900 border-r border-gray-200 align-middle text-center">一期上线</td>
+                                        <td class="px-4 py-3">景区门票、交通票、项目票、VIP票</td>
+                                        <td class="px-4 py-3">官方直连票务</td>
+                                        <td class="px-4 py-3 text-center">/</td>
+                                        <td rowspan="2" class="px-4 py-3 border-l border-gray-200 align-middle text-center">五月底之前</td>
+                                    </tr>
+                                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                        <td class="px-4 py-3">AI伴游</td>
+                                        <td class="px-4 py-3">实时导览讲解</td>
+                                        <td class="px-4 py-3 text-center">9.9</td>
+                                    </tr>
+                                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                        <td rowspan="5" class="px-4 py-3 font-medium text-gray-900 border-r border-gray-200 align-middle text-center">后期考虑</td>
+                                        <td class="px-4 py-3">AI生图</td>
+                                        <td class="px-4 py-3">一键P图、一键消除障碍</td>
+                                        <td class="px-4 py-3 text-center">29.9</td>
+                                        <td rowspan="5" class="px-4 py-3 border-l border-gray-200 align-middle text-center">7月旺季前</td>
+                                    </tr>
+                                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                        <td class="px-4 py-3">AI生视频</td>
+                                        <td class="px-4 py-3">一键生成无人机视频</td>
+                                        <td class="px-4 py-3 text-center">59.9</td>
+                                    </tr>
+                                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                        <td class="px-4 py-3">黄小西X高德X景区联名硬件文创盲盒</td>
+                                        <td class="px-4 py-3">官方贵州省景区讲解等服务</td>
+                                        <td class="px-4 py-3 text-center">199</td>
+                                    </tr>
+                                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                        <td class="px-4 py-3">黄小西X高德：联名充电宝</td>
+                                        <td class="px-4 py-3">低单价充电宝，充电宝优惠券</td>
+                                        <td class="px-4 py-3 text-center text-xs">目前我们充电宝租赁价格可自定义设置</td>
+                                    </tr>
+                                    <tr class="bg-white hover:bg-gray-50 transition-colors">
+                                        <td class="px-4 py-3">实体旅拍服务</td>
+                                        <td class="px-4 py-3">组织景区实体旅拍商家，进行旅拍商品售卖</td>
+                                        <td class="px-4 py-3 text-center">300</td>
+                                    </tr>
+                                    <tr class="bg-white hover:bg-gray-50 transition-colors">
+                                        <td class="border-r border-gray-200"></td>
+                                        <td class="px-4 py-3 border-t border-gray-200">景区餐饮优惠套餐</td>
+                                        <td class="px-4 py-3 border-t border-gray-200">整合景区内美食团购</td>
+                                        <td class="px-4 py-3 text-center border-t border-gray-200">128</td>
+                                        <td class="border-l border-gray-200"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- 第二组 -->
-                <div class="bento-card p-6 flex flex-col gap-8 items-center h-full lg:col-span-2">
-                    <div class="w-full flex flex-col sm:flex-row gap-8 items-center">
-                        <div class="w-full sm:w-1/2 flex flex-col justify-center">
+                <div class="bento-card p-6 flex flex-col gap-8 h-full lg:col-span-2">
+                    <div class="w-full flex flex-col gap-6">
+                        <div class="w-full flex flex-col">
                             <div class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-pine-50 text-pine-700 text-xs font-bold rounded-md mb-4 w-max border border-pine-100">
                                 <span class="w-2 h-2 rounded-full bg-pine-500"></span>第二组
                             </div>
                             <h3 class="text-4xl font-bold text-pine-900 mb-2 tracking-tight">「游客体验」组</h3>
                             <h4 class="text-lg font-medium text-pine-600 mb-6">围绕游客体验产品迭代与硬件准备</h4>
                             
-                            <div class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <!-- 组内目标 -->
-                                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                                    <div class="flex items-center gap-2 mb-2 text-pine-800 font-bold">
+                                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 h-full trae-browser-inspect-draggable">
+                                    <div class="flex items-center gap-2 mb-3 text-pine-800 font-bold">
                                         <i data-lucide="crosshair" class="w-4 h-4 text-pine-500"></i> 小组目标
                                     </div>
-                                    <p class="text-gray-600 text-sm leading-relaxed">
-                                        围绕游客体验产品迭代，且做硬件准备（耳机、玩偶、眼镜）。
-                                    </p>
+                                    <div class="space-y-3">
+                                        <div class="flex items-start gap-2">
+                                            <div class="w-5 h-5 rounded bg-pine-100 text-pine-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">1</div>
+                                            <p class="text-gray-600 text-sm leading-relaxed">
+                                                <strong>体验升级：</strong>围绕游客全链路游玩体验进行产品功能迭代，提升互动趣味性与使用便捷度。
+                                            </p>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <div class="w-5 h-5 rounded bg-pine-100 text-pine-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">2</div>
+                                            <p class="text-gray-600 text-sm leading-relaxed">
+                                                <strong>硬件赋能：</strong>推进智能穿戴设备（耳机、AR眼镜）及实体周边（玩偶）的落地，以硬件作为 AI 服务的载体。
+                                            </p>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <div class="w-5 h-5 rounded bg-pine-100 text-pine-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">3</div>
+                                            <p class="text-gray-600 text-sm leading-relaxed">
+                                                <strong>软硬融合：</strong>打通线上智能体与线下智能设备的交互闭环，创造沉浸式、陪伴式的创新游览模式。
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                                 
                                 <!-- 重点产出 -->
-                                <div>
+                                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 h-full">
                                     <div class="flex items-center gap-2 mb-3 text-pine-800 font-bold">
                                         <i data-lucide="package" class="w-4 h-4 text-pine-500"></i> 重点工作内容
                                     </div>
@@ -510,17 +626,6 @@
                                             <span><strong>园内游玩机制运营工作（游中）：</strong>包括剧本杀等线上线下结合功能。</span>
                                         </li>
                                     </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full sm:w-1/2 flex justify-center py-6 bg-sand-50/50 rounded-3xl border border-gray-100 relative overflow-hidden h-[420px]">
-                            <div class="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
-                                <i data-lucide="smartphone" class="w-32 h-32 text-pine-500"></i>
-                            </div>
-                            <div class="mobile-frame z-10 shadow-2xl h-full max-h-[380px] w-auto shrink-0">
-                                <div class="mobile-frame-inner">
-                                    <i data-lucide="smartphone" class="w-10 h-10 mb-3 opacity-50"></i>
-                                    <span class="text-xs font-medium px-4 text-center">手机端与硬件<br/>联动控制界面</span>
                                 </div>
                             </div>
                         </div>
@@ -562,11 +667,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="p-3 border-t border-gray-100 bg-gray-50/50">
-                                <div class="image-placeholder h-20 rounded-lg">
-                                    <i data-lucide="image" class="w-4 h-4 mb-1 opacity-50"></i>
-                                    <span class="text-[10px]">玩偶参考图</span>
-                                </div>
+                            <div class="p-3 border-t border-gray-100 bg-gray-50/50 h-[104px]">
+                                <img src="./bb57b38ed6d182d131f2b8ba930b60d5.jpg" alt="玩偶参考图" class="w-full h-full object-cover rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300" onclick="openImageModal(this.src)">
                             </div>
                         </div>
 
@@ -608,8 +710,8 @@
                                     <i data-lucide="headphones" class="w-6 h-6 text-gray-500"></i>
                                 </div>
                                 <div class="text-sm font-bold text-gray-700">智能语音讲解耳机</div>
-                                <p class="text-xs text-gray-500 leading-relaxed">
-                                    结合位置唤醒能力，实现走到哪讲到哪，支持自然语言对话与景点问答交互。<br/>
+                                <p class="text-xs text-gray-500 leading-relaxed trae-browser-inspect-draggable">
+                                    基于瑞昱及乐鑫平台开发，支持蓝牙与Wi-Fi双模通信。具备多路麦克风拾音、VAD检测与AEC降噪功能，无缝接入GPT云端实现自然语言连续对话与智能问答，提供低功耗、全方位的AI语音伴游体验。<br>
                                     <span class="text-gray-600 mt-2 inline-block font-medium">（硬件选型及成本待评估）</span>
                                 </p>
                             </div>
@@ -673,7 +775,7 @@
                                                             <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-500 flex items-center justify-center border border-amber-100">
                                                                 <i data-lucide="trending-up" class="w-4 h-4"></i>
                                                             </div>
-                                                            <span class="text-sm font-bold text-gray-800">增收大师</span>
+                                                            <span class="text-sm font-bold text-gray-800">增收主管</span>
                                                         </div>
                                                         <span class="text-[10px] text-green-600 bg-green-50 border border-green-100 px-2 py-0.5 rounded-full font-medium">运行中</span>
                                                     </div>
@@ -690,7 +792,7 @@
                                                             <div class="w-8 h-8 rounded-lg bg-purple-50 text-purple-500 flex items-center justify-center border border-purple-100">
                                                                 <i data-lucide="line-chart" class="w-4 h-4"></i>
                                                             </div>
-                                                            <span class="text-sm font-bold text-gray-800">预测大师</span>
+                                                            <span class="text-sm font-bold text-gray-800">预测主管</span>
                                                         </div>
                                                         <span class="text-[10px] text-green-600 bg-green-50 border border-green-100 px-2 py-0.5 rounded-full font-medium">运行中</span>
                                                     </div>
@@ -707,7 +809,7 @@
                                                             <div class="w-8 h-8 rounded-lg bg-pink-50 text-pink-500 flex items-center justify-center border border-pink-100">
                                                                 <i data-lucide="pen-tool" class="w-4 h-4"></i>
                                                             </div>
-                                                            <span class="text-sm font-bold text-gray-800">内容大师</span>
+                                                            <span class="text-sm font-bold text-gray-800">内容主管</span>
                                                         </div>
                                                         <span class="text-[10px] text-green-600 bg-green-50 border border-green-100 px-2 py-0.5 rounded-full font-medium">运行中</span>
                                                     </div>
@@ -724,7 +826,7 @@
                                                             <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-500 flex items-center justify-center border border-rose-100">
                                                                 <i data-lucide="megaphone" class="w-4 h-4"></i>
                                                             </div>
-                                                            <span class="text-sm font-bold text-gray-800">营销大师</span>
+                                                            <span class="text-sm font-bold text-gray-800">营销主管</span>
                                                         </div>
                                                         <span class="text-[10px] text-green-600 bg-green-50 border border-green-100 px-2 py-0.5 rounded-full font-medium">运行中</span>
                                                     </div>
@@ -741,7 +843,7 @@
                                                             <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-500 flex items-center justify-center border border-indigo-100">
                                                                 <i data-lucide="headphones" class="w-4 h-4"></i>
                                                             </div>
-                                                            <span class="text-sm font-bold text-gray-800">服务大师</span>
+                                                            <span class="text-sm font-bold text-gray-800">服务主管</span>
                                                         </div>
                                                         <span class="text-[10px] text-green-600 bg-green-50 border border-green-100 px-2 py-0.5 rounded-full font-medium">运行中</span>
                                                     </div>
@@ -758,7 +860,7 @@
                                                             <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center border border-slate-200">
                                                                 <i data-lucide="shield-check" class="w-4 h-4"></i>
                                                             </div>
-                                                            <span class="text-sm font-bold text-gray-800">管控大师</span>
+                                                            <span class="text-sm font-bold text-gray-800">管控主管</span>
                                                         </div>
                                                         <span class="text-[10px] text-green-600 bg-green-50 border border-green-100 px-2 py-0.5 rounded-full font-medium">运行中</span>
                                                     </div>
@@ -831,7 +933,7 @@
                                                     </div>
                                                     <div class="flex-1 min-w-0">
                                                         <div class="text-xs font-bold text-gray-800 truncate">东门垃圾桶已满，需清理</div>
-                                                        <div class="text-[9px] text-gray-500 truncate mt-0.5">巡检大师自动派发 · 10分钟前</div>
+                                                        <div class="text-[9px] text-gray-500 truncate mt-0.5">巡检主管自动派发 · 10分钟前</div>
                                                     </div>
                                                     <button class="px-2.5 py-1 bg-rose-50 text-rose-600 text-[10px] rounded-full font-bold hover:bg-rose-100 transition-colors shrink-0">去处理</button>
                                                 </div>
@@ -841,7 +943,7 @@
                                                     </div>
                                                     <div class="flex-1 min-w-0">
                                                         <div class="text-xs font-bold text-gray-800 truncate">清晨日报已生成</div>
-                                                        <div class="text-[9px] text-gray-500 truncate mt-0.5">运营大师 · 早上 8:00</div>
+                                                        <div class="text-[9px] text-gray-500 truncate mt-0.5">运营主管 · 早上 8:00</div>
                                                     </div>
                                                     <button class="px-2.5 py-1 bg-pine-50 text-pine-600 text-[10px] rounded-full font-bold hover:bg-pine-100 transition-colors shrink-0">查看</button>
                                                 </div>
@@ -852,41 +954,41 @@
                                         <div class="px-4 pb-4">
                                             <h4 class="text-sm font-bold text-gray-800 mb-3">智能体服务矩阵</h4>
                                             <div class="grid grid-cols-4 gap-y-4 gap-x-2">
-                                                <!-- 运营大师 -->
+                                                <!-- 运营主管 -->
                                                 <div class="flex flex-col items-center gap-1.5 cursor-pointer group">
                                                     <div class="w-11 h-11 rounded-[14px] bg-white border border-gray-100 shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform group-hover:shadow-md relative group-hover:border-pine-300">
                                                         <i data-lucide="file-text" class="w-5 h-5 text-pine-600"></i>
                                                         <div class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-red-500 text-white text-[8px] flex items-center justify-center rounded-full font-bold border border-white">1</div>
                                                     </div>
-                                                    <span class="text-[9px] text-gray-600 font-medium">运营大师</span>
+                                                    <span class="text-[9px] text-gray-600 font-medium">运营主管</span>
                                                 </div>
-                                                <!-- 数据大师 -->
+                                                <!-- 数据主管 -->
                                                 <div class="flex flex-col items-center gap-1.5 cursor-pointer group">
                                                     <div class="w-11 h-11 rounded-[14px] bg-white border border-gray-100 shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform group-hover:shadow-md group-hover:border-blue-300">
                                                         <i data-lucide="bar-chart-2" class="w-5 h-5 text-blue-500"></i>
                                                     </div>
-                                                    <span class="text-[9px] text-gray-600 font-medium">数据大师</span>
+                                                    <span class="text-[9px] text-gray-600 font-medium">数据主管</span>
                                                 </div>
-                                                <!-- 服务大师 -->
+                                                <!-- 服务主管 -->
                                                 <div class="flex flex-col items-center gap-1.5 cursor-pointer group">
                                                     <div class="w-11 h-11 rounded-[14px] bg-white border border-gray-100 shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform group-hover:shadow-md group-hover:border-indigo-300">
                                                         <i data-lucide="headphones" class="w-5 h-5 text-indigo-500"></i>
                                                     </div>
-                                                    <span class="text-[9px] text-gray-600 font-medium">服务大师</span>
+                                                    <span class="text-[9px] text-gray-600 font-medium">服务主管</span>
                                                 </div>
-                                                <!-- 协作大师 -->
+                                                <!-- 协作主管 -->
                                                 <div class="flex flex-col items-center gap-1.5 cursor-pointer group">
                                                     <div class="w-11 h-11 rounded-[14px] bg-white border border-gray-100 shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform group-hover:shadow-md group-hover:border-teal-300">
                                                         <i data-lucide="users" class="w-5 h-5 text-teal-500"></i>
                                                     </div>
-                                                    <span class="text-[9px] text-gray-600 font-medium">协作大师</span>
+                                                    <span class="text-[9px] text-gray-600 font-medium">协作主管</span>
                                                 </div>
-                                                <!-- 巡检大师 -->
+                                                <!-- 巡检主管 -->
                                                 <div class="flex flex-col items-center gap-1.5 cursor-pointer group">
                                                     <div class="w-11 h-11 rounded-[14px] bg-white border border-gray-100 shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform group-hover:shadow-md group-hover:border-slate-400">
                                                         <i data-lucide="shield-check" class="w-5 h-5 text-slate-600"></i>
                                                     </div>
-                                                    <span class="text-[9px] text-gray-600 font-medium">巡检大师</span>
+                                                    <span class="text-[9px] text-gray-600 font-medium">巡检主管</span>
                                                 </div>
                                                 <!-- 更多 -->
                                                 <div class="flex flex-col items-center gap-1.5 cursor-pointer group">
@@ -909,7 +1011,7 @@
                                                     </div>
                                                     <div class="flex-1 border-b border-gray-100 pb-2 group-hover:border-amber-200 transition-colors min-w-0">
                                                         <div class="flex justify-between items-center mb-0.5">
-                                                            <div class="text-xs font-bold text-gray-800">增收大师</div>
+                                                            <div class="text-xs font-bold text-gray-800">增收主管</div>
                                                             <div class="text-[9px] text-gray-400">刚刚</div>
                                                         </div>
                                                         <div class="text-[10px] text-gray-500 truncate">已为您生成针对20-30岁游客的门票+雪糕特惠套餐，预计转化率提升12%。</div>
@@ -921,7 +1023,7 @@
                                                     </div>
                                                     <div class="flex-1 border-b border-gray-100 pb-2 group-hover:border-purple-200 transition-colors min-w-0">
                                                         <div class="flex justify-between items-center mb-0.5">
-                                                            <div class="text-xs font-bold text-gray-800">预测大师</div>
+                                                            <div class="text-xs font-bold text-gray-800">预测主管</div>
                                                             <div class="text-[9px] text-gray-400">10:30</div>
                                                         </div>
                                                         <div class="text-[10px] text-gray-500 truncate">预警：预计下午2点东门入园人数激增，建议增加2个临时检票口。</div>
@@ -968,7 +1070,7 @@
                                         <i data-lucide="crosshair" class="w-4 h-4 text-pine-500"></i> 核心价值
                                     </div>
                                     <p class="text-gray-600 text-sm leading-relaxed">
-                                        面向景区管理层量身打造的一站式多智能体服务平台。聚合九大业务“大师”，从营销增收到预测管控，实现随时随地的运营自驱与全链路管理闭环。
+                                        面向景区管理层量身打造的一站式多智能体服务平台。聚合九大业务“主管”，从营销增收到预测管控，实现随时随地的运营自驱与全链路管理闭环。
                                     </p>
                                 </div>
                                 
@@ -1064,58 +1166,6 @@
                             <img src="./1.jpg" alt="运营展示图 2" class="w-full h-auto rounded-xl shadow-sm border border-gray-200">
                             <img src="./2.jpg" alt="运营展示图 3" class="w-full h-auto rounded-xl shadow-sm border border-gray-200">
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 3: 下一阶段工作目标 -->
-        <section class="space-y-10 pb-12">
-            <div class="flex items-center justify-between border-b border-gray-200 pb-4">
-                <h2 class="text-3xl font-bold text-pine-900 serif flex items-center gap-3">
-                    <i data-lucide="flag" class="w-8 h-8 text-pine-500"></i>
-                    下一阶段主要工作目标
-                </h2>
-                <span class="text-sm text-gray-400 font-medium uppercase tracking-wider">04 / Next Steps</span>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- 目标 1 -->
-                <div class="bento-card p-8 flex flex-col justify-between border-l-4 border-l-pine-500">
-                    <div>
-                        <div class="w-12 h-12 bg-pine-50 rounded-xl flex items-center justify-center mb-6">
-                            <i data-lucide="check-square" class="w-6 h-6 text-pine-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-pine-900 mb-3">产品接入做实</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">
-                            完成前期合作景区的产品接入与系统部署，确保智能体核心功能在试点景区的稳定运行与体验打磨。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 目标 2 -->
-                <div class="bento-card p-8 flex flex-col justify-between border-l-4 border-l-pine-500">
-                    <div>
-                        <div class="w-12 h-12 bg-pine-50 rounded-xl flex items-center justify-center mb-6">
-                            <i data-lucide="users" class="w-6 h-6 text-pine-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-pine-900 mb-3">推进合伙人机制</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">
-                            在多个核心城市全面推进城市合伙人合作机制，扩大黄小西景区智能体的线下推广网络。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 目标 3 -->
-                <div class="bento-card p-8 flex flex-col justify-between border-l-4 border-l-pine-500">
-                    <div>
-                        <div class="w-12 h-12 bg-pine-50 rounded-xl flex items-center justify-center mb-6">
-                            <i data-lucide="bot" class="w-6 h-6 text-pine-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-pine-900 mb-3">启动硬件方案</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">
-                            确立最终的硬件选型方案（如道格拉斯玩偶等），完成开模与生产准备，正式启动软硬件结合阶段。
-                        </p>
                     </div>
                 </div>
             </div>
